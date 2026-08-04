@@ -30,15 +30,8 @@ app.include_router(
 )
 
 
-@app.get(
-    "/",
-    tags=["Root"],
-)
+@app.get("/")
 async def root():
-    """
-    Root endpoint.
-    """
-
     return {
         "message": settings.APP_NAME,
         "version": settings.APP_VERSION,

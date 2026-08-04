@@ -1,9 +1,8 @@
 """
-API v1 Router
+API Router
 """
 
 from fastapi import APIRouter
-
 from app.api.v1.endpoints.health import router as health_router
 
 api_router = APIRouter()
