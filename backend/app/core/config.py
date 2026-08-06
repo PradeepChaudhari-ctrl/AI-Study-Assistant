@@ -1,26 +1,25 @@
 """
 Application configuration.
-
-Loads all environment variables using Pydantic Settings.
 """
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    # Application
     APP_NAME: str
     APP_VERSION: str
     DEBUG: bool
 
-    # API
     API_V1_PREFIX: str
-
-    # CORS
     BACKEND_CORS_ORIGINS: str
 
-    # Database
     DATABASE_URL: str
+
+    SECRET_KEY: str
+    ALGORITHM: str
+
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    REFRESH_TOKEN_EXPIRE_DAYS: int
 
     model_config = SettingsConfigDict(
         env_file=".env",
