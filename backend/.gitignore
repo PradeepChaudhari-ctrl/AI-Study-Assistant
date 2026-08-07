@@ -3,15 +3,6 @@
 __pycache__/
 *.pyc
 
-# Database
-*.db
-
-# Uploads
-uploads/
-
-# Vector Database
-chroma_db/
-
 # Environment
 .env
 
